@@ -20,7 +20,7 @@
   <style>
   body {
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 
   }
 
@@ -99,14 +99,20 @@
             <li><a href="https://en.wikipedia.org/wiki/Queens" target = "_blank">Queens</a></li>
             <li><a href="https://en.wikipedia.org/wiki/The_Bronx" target = "_blank">The Bronx</a></li>
             <li><a href="https://en.wikipedia.org/wiki/Staten_Island" target = "_blank">Staten Island</a></li>
-
             <li role="separator" class="divider"></li>
             <li><a href="http://www1.nyc.gov/" target = "_blank">The Official Website</a></li>
-
           </ul>
-          <li><a href="#">About</a></li>
-
         </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Teams<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://en.wikipedia.org/wiki/Manhattan" target = "_blank">Brooklyn Nets</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Brooklyn" target = "_blank">New York Knicks</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Queens" target = "_blank">New York Yankees</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/The_Bronx" target = "_blank">New York Mets</a></li>
+            </ul>
+        </li>
+        <li><a href="#" data-toggle = "modal" data-target = "#about">About</a></li>
       </ul>
 
     </div><!-- /.navbar-collapse -->
@@ -305,11 +311,28 @@
 </div>
 
 
+<div class="modal fade" tabindex="-1" role="dialog" id = "about">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">About</h4>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+
   </body>
 </html>
