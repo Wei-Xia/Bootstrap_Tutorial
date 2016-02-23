@@ -20,11 +20,14 @@
   <style>
   body {
     padding-top: 50px;
+    padding-bottom: 50px;
+
   }
 
   .carousel {
     height: 500px;
     background-color: #000;
+    margin-bottom: 60px;
   }
 
   .carousel .item {
@@ -41,6 +44,32 @@
     font-size: 20px;
     line-height: 1;
   }
+
+  #logo-text .col-md-3{
+    text-align: center;
+  }
+
+  hr.divider {
+    margin: 40px 0;
+  }
+
+  .rowFeature {
+    padding: 30px 0;
+  }
+
+  .feature-heading {
+    font-size: 50px;
+    color: #2a6496;
+    margin-top: 120px;
+  }
+
+  .feature-heading .text-muted {
+    font-size: 28px;
+    color: #999;
+  }
+
+  /*.footer {
+  }*/
   </style>
 
   <body>
@@ -60,19 +89,23 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
+        <li><a href="http://www.nycgo.com/" target = "_blank">NYC Go</a></li>
+        <li><a href="http://www.yelp.com/nyc" target = "_blank">NYC Yelp</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Boroughs<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Manhattan" target = "_blank">Manhattan</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Brooklyn" target = "_blank">Brooklyn</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Queens" target = "_blank">Queens</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/The_Bronx" target = "_blank">The Bronx</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Staten_Island" target = "_blank">Staten Island</a></li>
+
             <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
+            <li><a href="http://www1.nyc.gov/" target = "_blank">The Official Website</a></li>
+
           </ul>
+          <li><a href="#">About</a></li>
+
         </li>
       </ul>
 
@@ -86,7 +119,7 @@
     <li data-target="#carousel" data-slide-to="0" class="active"></li>
     <li data-target="#carousel" data-slide-to="1"></li>
     <li data-target="#carousel" data-slide-to="2"></li>
-    <li data-target="#carousel" data-slide-to="2"></li>
+    <li data-target="#carousel" data-slide-to="3"></li>
   </ol>
 
   <!-- Wrapper for slides -->
@@ -97,33 +130,32 @@
         <h1>Brooklyn Bridge</h1>
         <p>The Brooklyn Bridge is a hybrid cable-stayed/suspension bridge in New York City and is one of the oldest bridges of either type in the United States.</p>
         <button type="button" class="btn btn-primary btn-lg" href:"http://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml" target = "_blank" role = "button">Official Website</button>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/one-world-trade-center.jpg" alt="Slide 2">
+      <div class="carousel-caption">
+        <h1>One World Trade Center</h1>
+        <p>One World Trade Center is the main building of the rebuilt World Trade Center complex in Lower Manhattan, New York City. It is the tallest skyscraper in the Western Hemisphere, and the sixth-tallest in the world.</p>
+        <button type="button" class="btn btn-primary btn-lg" href:"http://www.wtc.com/" target = "_blank" role = "button">Official Website</button>
 
       </div>
     </div>
     <div class="item">
-      <img src="images/EMPIRE.jpg" alt="Slide 2">
+      <img src="images/EMPIRE.jpg" alt="Slide 3">
       <div class="carousel-caption">
-        <h1>1</h1>
-        <p>f</p>
-        <button type="button" class="btn btn-primary btn-lg" href:"www.google.com" target = "_blank" role = "button">Primary</button>
-
-      </div>
-    </div>
-    <div class="item">
-      <img src="images/one-world-trade-center.jpg" alt="Slide 3">
-      <div class="carousel-caption">
-        <h1>1</h1>
-        <p>f</p>
-        <button type="button" class="btn btn-primary btn-lg" href:"www.google.com" target = "_blank" role = "button">Primary</button>
+        <h1>Empire State Building</h1>
+        <p>The Empire State Building is a 102-story skyscraper located in Midtown Manhattan, New York City, on Fifth Avenue between West 33rd and 34th Streets.</p>
+        <button type="button" class="btn btn-primary btn-lg" href:"http://www.esbnyc.com/" target = "_blank" role = "button">Official Website</button>
 
       </div>
     </div>
     <div class="item">
       <img src="images/statue of liberty.jpg" alt="Slide 4">
       <div class="carousel-caption">
-        <h1>1</h1>
-        <p>f</p>
-        <button type="button" class="btn btn-primary btn-lg" href:"www.google.com" target = "_blank" role = "button">Primary</button>
+        <h1>Statue of Liberty</h1>
+        <p>The Statue of Liberty is a colossal neoclassical sculpture on Liberty Island in New York Harbor in New York City, in the United States.</p>
+        <button type="button" class="btn btn-primary btn-lg" href:"http://www.nps.gov/stli/index.htm" target = "_blank" role = "button">Official Website</button>
 
       </div>
     </div>
@@ -140,34 +172,140 @@
   </a>
 </div>
 
+<!-- logo -->
+<div class = "container" id = "logo-text">
+<div class = "logo">
 <div class="row">
-  <div class="col-md-4">
-  <img class = "img-circle" src ="" alt="">
+  <div class = "team">
+  <div class="col-md-3">
+  <img class = "img" class="img-responsive" src ="images/Nets.png" alt="" height="110" width="110">
   <h2>
-    22
+    Brooklyn Nets
   </h2>
   <p>
-    fdsafa
+    The Brooklyn Nets are an American professional basketball team based in New York City.
   </p>
   </div>
-  <div class="col-md-4">
-    <img class = "img-circle" src ="" alt="">
+  </div>
+  <div class = "team">
+  <div class="col-md-3">
+    <img class = "img" class="img-responsive" src ="images/Knicks.PNG" alt="" height="110" width="110">
     <h2>
-      22
+      New York Knicks
     </h2>
     <p>
-      fdsafa
+      The New York Knickerbockers, commonly referred to as the Knicks, are an American professional basketball team based in New York City.
     </p>
   </div>
-  <div class="col-md-4">  <img class = "img-circle" src ="" alt="">
+  </div>
+  <div class = "team">
+  <div class="col-md-3">
+    <img class = "img" class="img-responsive" src ="images/Yankees.png" alt="" height="110" width="110">
     <h2>
-      22
+      New York Yankees
     </h2>
     <p>
-      fdsafa
+      The New York Yankees are an American professional baseball team based in the Bronx, New York City, New York, that competes in Major League Baseball.
+    </p>
+  </div>
+  </div>
+  <div class = "team">
+  <div class="col-md-3">
+    <img class = "img" class="img-responsive" src ="images/Mets.png" alt="" height="110" width="110">
+    <h2>
+      New York Mets
+    </h2>
+    <p>
+      The New York Mets are an American professional baseball team based in New York City.
     </p>
   </div>
 </div>
+</div>
+
+<hr class = "divider">
+
+<div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#tab-Nets" aria-controls="home" role="tab" data-toggle="tab">Nets</a></li>
+    <li role="presentation"><a href="#tab-Knicks" aria-controls="profile" role="tab" data-toggle="tab">Knicks</a></li>
+    <li role="presentation"><a href="#tab-Yankees" aria-controls="messages" role="tab" data-toggle="tab">Yankees</a></li>
+    <li role="presentation"><a href="#tab-Mets" aria-controls="settings" role="tab" data-toggle="tab">Mets</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="tab-Nets">
+      <div class = "rowFeature">
+      <div class = "col-md-7">
+        <h2 class = "feature-heading">Brooklyn Nets<span class = "text-muted"> Basketball Team </span></h2>
+        <p class = "lead">
+          The Brooklyn Nets are an American professional basketball team based in New York City. The Nets compete in the National Basketball Association (NBA) as a member club of the Atlantic Division of the Eastern Conference. The team plays its home games at the Barclays Center, located in the borough of Brooklyn.
+        </p>
+      </div>
+      <div class = "col-md-5">
+        <img class="img-responsive" src ="images/Nets.png" alt="" height="350" width="350">
+      </div>
+    </div>
+  </div>
+
+    <div role="tabpanel" class="tab-pane" id="tab-Knicks">
+      <div class = "rowFeature">
+      <div class = "col-md-5">
+        <img class="img-responsive" src ="images/Knicks.png" alt="" height="350" width="350">
+      </div>
+      <div class = "col-md-7">
+        <h2 class = "feature-heading">New York Knicks<span class = "text-muted"> Basketball Team </span></h2>
+        <p class = "lead">
+          The New York Knickerbockers, commonly referred to as the Knicks, are an American professional basketball team based in New York City. The Knicks compete in the National Basketball Association (NBA) as a member club of the Atlantic Division of the Eastern Conference. The team plays its home games at Madison Square Garden, located in the borough of Manhattan.</p>
+      </div>
+    </div>
+  </div>
+
+    <div role="tabpanel" class="tab-pane" id="tab-Yankees">
+      <div class = "rowFeature">
+      <div class = "col-md-7">
+        <h2 class = "feature-heading">New York Yankees<span class = "text-muted"> Baseball Team </span> </h2>
+        <p class = "lead">
+          The New York Yankees are an American professional baseball team based in the Bronx, New York City, New York, that competes in Major League Baseball (MLB). The Yankees are a member of MLB's American League (AL) East division. The Yankees are one of two Major League clubs based in New York, the other being the New York Mets.
+        </p>
+      </div>
+      <div class = "col-md-5">
+        <img class="img-responsive" src ="images/Yankees.png" alt="" height="350" width="350">
+      </div>
+    </div>
+  </div>
+
+    <div role="tabpanel" class="tab-pane" id="tab-Mets">
+      <div class = "rowFeature">
+      <div class = "col-md-5">
+        <img class="img-responsive" src ="images/Mets.png" alt="" height="350" width="350">
+      </div>
+      <div class = "col-md-7">
+        <h2 class = "feature-heading">New York Mets<span class = "text-muted"> Baseball Team </span> </h2>
+        <p class = "lead">
+          The New York Mets are an American professional baseball team based in New York City. The Mets are a member of the National League East Division of Major League Baseball (MLB). The Mets are one of two Major League clubs based in New York, the other being the New York Yankees.
+        </p>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div class = "container">
+  <hr class = "divider">
+
+  <footer>
+    <p class = "pull-right"><a href="#top">Back to top</a></p>
+      <p>&#169 Wei Xia</p>
+  </footer>
+</div>
+
+
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
