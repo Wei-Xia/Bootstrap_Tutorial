@@ -73,7 +73,7 @@
   </style>
 
   <body>
-<nav class="navbar navbar-inverse navbar-fixed-top" role = "navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top" role = "navigation" id="menu-nav">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -105,12 +105,12 @@
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Teams<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="tab-Nets">Brooklyn Nets</a></li>
-            <li><a href="tab-Knicks">New York Knicks</a></li>
-            <li><a href="tab-Yankees">New York Yankees</a></li>
-            <li><a href="tab-Mets">New York Mets</a></li>
-            </ul>
+          <ul class="dropdown-menu" role = "menu">
+            <li><a href="#feature-tab" data-tab="tab-Nets">Brooklyn Nets</a></li>
+            <li><a href="#feature-tab" data-tab="tab-Knicks">New York Knicks</a></li>
+            <li><a href="#feature-tab" data-tab="tab-Yankees">New York Yankees</a></li>
+            <li><a href="#feature-tab" data-tab="tab-Mets">New York Mets</a></li>
+          </ul>
         </li>
         <li><a href="#" data-toggle = "modal" data-target = "#about">About</a></li>
       </ul>
@@ -233,11 +233,11 @@
 <div>
 
   <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist" id="tab-list">
-    <li role="presentation" class="active"><a href="#tab-Nets" aria-controls="home" role="tab" data-toggle="tab">Nets</a></li>
-    <li role="presentation"><a href="#tab-Knicks" aria-controls="profile" role="tab" data-toggle="tab">Knicks</a></li>
-    <li role="presentation"><a href="#tab-Yankees" aria-controls="messages" role="tab" data-toggle="tab">Yankees</a></li>
-    <li role="presentation"><a href="#tab-Mets" aria-controls="settings" role="tab" data-toggle="tab">Mets</a></li>
+  <ul class="nav nav-tabs" role="tablist" id="feature-tab">
+    <li role="presentation" class="active"><a href="#tab-Nets" role="tab" data-toggle="tab">Nets</a></li>
+    <li role="presentation"><a href="#tab-Knicks" role="tab" data-toggle="tab">Knicks</a></li>
+    <li role="presentation"><a href="#tab-Yankees" role="tab" data-toggle="tab">Yankees</a></li>
+    <li role="presentation"><a href="#tab-Mets" role="tab" data-toggle="tab">Mets</a></li>
   </ul>
 
   <!-- Tab panes -->
@@ -333,15 +333,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-<script>
-$(document).ready(funtion(){
-      $("#demo-navbar .dropdown-meun a").click(funtion(){
-          var href = $(this).attr("href");
 
-          $("#tab-list a[href='" + href + "']").tab('show'); // Select tab by name
+    <script>
+        $(function () {
+            $('#menu-nav .navbar-collapse a').click(function (e) {
+                var href = $(this).attr('href');
+                var tabId = $(this).attr('data-tab');
+                if ('#' !== href) {
+                    e.preventDefault();
+                    $(document).scrollTop($(href).offset().top - 70);
+                    if (tabId) {
+                        $('#feature-tab a[href=#' + tabId + ']').tab('show');
+                    }
+                }
+            });
+        });
+    </script>
 
-      })
-})
-</script>
   </body>
 </html>
